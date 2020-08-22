@@ -5,7 +5,7 @@ import Chat from './Chat'
 const chats = [
     {
         name: 'Angela Kee',
-        message: 'Hello handsome!',
+        message: 'Hello handsome 😜!',
         timestamp: '20 seconds ago',
         profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
     },
@@ -17,13 +17,13 @@ const chats = [
     },
     {
         name: 'Crystal Clear',
-        message: 'I am tired of work...',
+        message: 'I am tired of work... 😪',
         timestamp: '7 minutes ago',
         profilePic: ''
     },
     {
         name: 'Christina Ming',
-        message: 'Let\'s go for a coffee?',
+        message: 'Let\'s go for a coffee? ☕️',
         timestamp: '1 day ago',
         profilePic: ''
     },

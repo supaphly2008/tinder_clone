@@ -7,7 +7,7 @@ const ChatScreen = () => {
     const [messages, setMessages] = useState([
         {
             name: 'Angela Kee',
-            message: 'Hello handsome!',
+            message: 'Hello handsome 😜!',
             profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
         },
         {
@@ -16,7 +16,7 @@ const ChatScreen = () => {
             profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
         },
         {
-            message: 'Hello handsome!',
+            message: 'Hey there!! 😎',
         }
     ])
 
