@@ -1,24 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './chatScreen.css'
 import Avatar from '@material-ui/core/Avatar'
 
-const ChatScreen = () => {
+const messages = [
+    {
+        name: 'Angela Kee',
+        message: 'Hello handsome 😜!',
+        profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
+    },
+    {
+        name: 'Angela Kee',
+        message: 'What is the plan?',
+        profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
+    },
+    {
+        message: 'Hey there!! 😎',
+    }
+];
 
-    const [messages, setMessages] = useState([
-        {
-            name: 'Angela Kee',
-            message: 'Hello handsome 😜!',
-            profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
-        },
-        {
-            name: 'Angela Kee',
-            message: 'What is the plan?',
-            profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
-        },
-        {
-            message: 'Hey there!! 😎',
-        }
-    ])
+const ChatScreen = () => {
 
     return (
         <div className="chatScreen">
