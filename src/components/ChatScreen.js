@@ -1,24 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './chatScreen.css'
 import Avatar from '@material-ui/core/Avatar'
 
-const messages = [
-    {
-        name: 'Angela Kee',
-        message: 'Hello handsome 😜!',
-        profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
-    },
-    {
-        name: 'Angela Kee',
-        message: 'What is the plan?',
-        profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
-    },
-    {
-        message: 'Hey there!! 😎',
-    }
-];
+// const messages = [
+//     {
+//         name: 'Angela Kee',
+//         message: 'Hello handsome 😜!',
+//         profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
+//     },
+//     {
+//         name: 'Angela Kee',
+//         message: 'What is the plan?',
+//         profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
+//     },
+//     {
+//         message: 'Hey there!! 😎',
+//     }
+// ];
 
 const ChatScreen = () => {
+
+    const [userInput, setUserInput] = useState('')
+    const [messages, setMessages] = useState([
+        {
+            name: 'Angela Kee',
+            message: 'Hello handsome 😜!',
+            profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
+        },
+        {
+            name: 'Angela Kee',
+            message: 'What is the plan?',
+            profilePic: 'https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13.jpeg'
+        },
+        {
+            message: 'Hey there!! 😎',
+        }
+    ])
+
+    const onInputChangeHandler = (e) => {
+        setUserInput(e.target.value)
+    }
+
+    // send message event
+    const onSendHandler = (e) => {
+        e.preventDefault();
+        setMessages([...messages, { message: userInput }])
+        setUserInput('')
+    }
 
     return (
         <div className="chatScreen">
@@ -36,6 +64,10 @@ const ChatScreen = () => {
                     )
 
             ))}
+            <form className="chatScreen__send-form">
+                <input onChange={onInputChangeHandler} value={userInput} className="chatScreen__send-form__input" type="text" placeholder="Type in the message..."></input>
+                <button onClick={onSendHandler} type="submit" className="chatScreen__send-form__send">SEND</button>
+            </form>
         </div>
     )
 }
